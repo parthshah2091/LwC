@@ -1,0 +1,27 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card title="Opportunity Filter" icon-name="standard:opportunity">
+            <div class="slds-var-m-around_medium">
+                <p class="slds-text-heading_medium">Select a stage</p>
+                <br>
+                <lightning-button label="All" onclick={getAllStageHandle}></lightning-button>
+                <lightning-button label="Prospecting" onclick={getProspectingHandle}></lightning-button>
+                <lightning-button label="Qualification" onclick={getQualificationHandle}></lightning-button>
+                <lightning-button label="Need Analysis" onclick={getNeedsAnalysisHandle}></lightning-button>
+                <lightning-button label="Value Proposition" onclick={getValuePropositionHandle}></lightning-button>
+                <lightning-button label="Id.Decision Makers" onclick={getIdDecisionMakersHandle}></lightning-button>
+                <lightning-button label="Perception Analysis" onclick={getPerceptionAnalysisHandle}></lightning-button>
+                <lightning-button label="Proposal/Price Quote" onclick={getProposalPriceQuotesHandle}></lightning-button>
+                <lightning-button label="Negotiation/Review" onclick={getNegotiationHandle}></lightning-button>
+                <lightning-button label="Closed Won" onclick={getClosedWonHandle}></lightning-button>
+                <lightning-button label="Closed Lost" onclick={getClosedLostHandle}></lightning-button>
+                <template if:true={opportunities}>
+                    <lightning-datatable key-field="id" data={opportunities} columns={columns}>
+                    </lightning-datatable>
+                </template>                    
+                <!-- <template if:true={error}>
+                        {error}
+                </template> -->
+            </div>
+    </lightning-card>
+</template>
