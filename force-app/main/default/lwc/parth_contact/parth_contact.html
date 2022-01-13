@@ -1,0 +1,16 @@
+<template>
+    <lightning-card 
+        title="ContactShown" 
+        icon-name="custom:custom65">
+    </lightning-card>
+    <div class="slds-var-m-around_large">
+        <template if:true={contacts.data}>
+            <template for:each={contacts.data} for:item="contact">
+                <p key={contact.Id}>{contact.Name}</p>
+            </template>
+        </template>
+        <template if:true={contacts.data}>
+            <c-error-panel erros={contact.error}></c-error-panel>
+        </template>
+    </div>
+</template>

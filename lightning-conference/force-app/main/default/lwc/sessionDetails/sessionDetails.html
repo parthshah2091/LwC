@@ -1,0 +1,37 @@
+<template>
+  <template if:true={session}>
+    <h2><a href="#" onclick={handleSessionsClick}>Sessions</a>{session.Name}</h2>
+    <p class="icon time">{session.dateTime}</p>
+    <p class="icon room">{session.Room__c}</p>
+    <h3>Abstract</h3>
+    <div class="abstract">{session.Description__c}</div>
+    <h3>Speakers</h3>
+    <div class="speaker-list">
+      <template if:true={session.Session_Speakers__r}>
+        <template for:each={session.Session_Speakers__r} for:item="speaker">
+          <c-speaker-card key={speaker.Speaker__r.id} speaker={speaker.Speaker__r}>
+          </c-speaker-card>
+        </template>
+      </template>
+    </div>
+  </template>
+</template>
+
+<!-- <template>
+    <template if:true={session}>
+      <h2><a href="#" onclick={handleSessionsClick}>Sessions</a> &gt; {session.name}</h2>
+      <p class="icon time">{session.dateTime}</p>
+      <p class="icon room">{session.room}</p>
+      <h3>Abstract</h3>
+      <div class="abstract">{session.description}</div>
+      <h3>Speakers</h3>
+        <div class="speaker-list">
+          <template if:true={session.speakers}>
+            <template for:each={session.speakers} for:item="speaker">
+              <c-speaker-card key={speaker.id} speaker={speaker}>
+              </c-speaker-card>
+            </template>
+          </template>
+        </div>
+    </template>
+</template> -->

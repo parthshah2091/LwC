@@ -1,0 +1,23 @@
+<template>
+  <div class="list">
+    <input type="search" placeholder="Search sessions..."
+     oninput={handleSearchKeyInput} />
+    <template for:each={sessions} for:item="session">
+      <a key={session.Id} class="session" data-session-id={session.Id} onclick={handleSessionClick}>
+         <div>
+           <p class="title">{session.Name}</p>
+           <p class="icon time">{session.dateTime}</p>
+           <p class="icon room">{session.Room__c}</p>
+         </div>
+         <template if:true={session.Session_Speakers__r}>
+           <div class="speaker-pictures">
+             <template for:each={session.Session_Speakers__r} for:item="speaker">
+               <img key={speaker.Speaker__r.Id} src={speaker.Speaker__r.Picture_URL__c}
+                  alt={speaker.Speaker__r.Name} title={speaker.Speaker__r.Name}>
+              </template>
+           </div>
+       </template>
+     </a>
+    </template>
+  </div>
+</template>

@@ -1,0 +1,43 @@
+  p {
+    margin: 0;
+  }
+  .icon {
+    color: #039be5;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-left: 24px;
+  }
+  .icon.time {
+    background-image: url(https://developer.salesforce.com/files/js-dev/icons/clock.svg);
+    margin-top: .6rem;
+  }
+  .icon.room {
+    background-image: url(https://developer.salesforce.com/files/js-dev/icons/location.svg);
+    margin-top: .4rem;
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
+  h2 a, h2 a:visited {
+    color: #039be5;
+    text-decoration: none;
+  }
+  h2 a:hover {
+    color: #017bb7;
+  }
+  h3 {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 1.5rem 0 0.5rem 0;
+  }
+  .list-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .speaker-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 -0.5rem;
+  }
