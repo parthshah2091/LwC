@@ -37,3 +37,4 @@ $RECYCLE.BIN/
 # Local environment variables
 .env
 lwc-recipes
+LwCTask
