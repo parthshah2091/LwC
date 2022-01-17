@@ -10,3 +10,10 @@ package.xml
 
 # LWC Jest
 **/__tests__/**
+
+# Local environment variables
+.env
+lwc-recipes
+LwCTask
+force-app/troubleshoot-lwc
+VirtualDreamin2020
