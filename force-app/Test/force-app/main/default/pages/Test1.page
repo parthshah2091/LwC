@@ -1,0 +1,14 @@
+<apex:page>
+        <apex:pageBlock Title="Testing">
+           <apex:pageBlockSection title= "first">
+                <apex:pageBlockSectionItem>Hello</apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem>My name is Parth</apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem>How are you?</apex:pageBlockSectionItem>
+            </apex:pageBlockSection> 
+            <apex:pageBlockSection title= "second">
+                <apex:pageBlockSectionItem>Hello</apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem>My name is Shah</apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem>How are you?</apex:pageBlockSectionItem>
+            </apex:pageBlockSection> 
+        </apex:pageBlock>
+</apex:page>
