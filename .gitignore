@@ -40,3 +40,5 @@ lwc-recipes
 LwCTask
 force-app/troubleshoot-lwc
 VirtualDreamin2020
+force-app/Practice/build-apps-with-lwc
+.gitignore
