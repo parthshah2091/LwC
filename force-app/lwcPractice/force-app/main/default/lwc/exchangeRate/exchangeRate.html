@@ -1,27 +1,33 @@
 <template>
-    <lightning-card title="Callout from LWC">
-        <lightning-layout>
-            <div  class="search">
-                <div class="slds-p-around_medium lgc-bg">
-                    <!-- <div class="slds-var-m-bottom_small"> -->
-                        <lightning-input type="search" 
-                           value={searchValue}
-                           label="Search Currency Code"
-                           onchange={searchKeyword}
-                           placeholder="Currency Type"
-                           ></lightning-input>
-                    <!-- </div> -->
-                     <lightning-button title="Get" label="Get Exchange Rate"
-                        onclick={handleBtnClick}
-                        variant="brand"
-                        class="slds-align_absolute-center"></lightning-button>
-                     <template if:true={ExgRate}>
-                        <template iterator:it={ExgRate} >
-                            <li key={it.value.key}><div class="completed">{it.value}</div></li>
-                       </template>
-                     </template>  
-                </div>
-            </div>
-        </lightning-layout>    
-    </lightning-card>
+  <lightning-card title="Callout from LWC">
+    <lightning-layout>
+      <div class="search">
+        <div class="slds-p-around_medium lgc-bg">
+          <!-- <div class="slds-var-m-bottom_small"> -->
+          <lightning-input
+            type="search"
+            value={searchValue}
+            label="Search Currency Code"
+            onchange={searchKeyword}
+            placeholder="Currency Type"
+          ></lightning-input>
+          <!-- </div> -->
+          <lightning-button
+            title="Get"
+            label="Get Exchange Rate"
+            onclick={handleBtnClick}
+            variant="brand"
+            class="slds-align_absolute-center"
+          ></lightning-button>
+          <template if:true={ExgRate}>
+            <template iterator:it={ExgRate}>
+              <li key={it.value.key}>
+                <div class="completed">{it.value}</div>
+              </li>
+            </template>
+          </template>
+        </div>
+      </div>
+    </lightning-layout>
+  </lightning-card>
 </template>

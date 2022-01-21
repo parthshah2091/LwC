@@ -1,25 +1,37 @@
 <!-- sldsValidatorIgnore -->
 <template>
-    <!--TODO 1: Add required attributes to the lightning-card component-->
-    <lightning-card title="Lead Filter" icon-name="custom:custom101">
-        <div class="slds-var-m-around_medium">
-            <p class="slds-text-heading_medium">Select a status</p>
-            <br>
-            <!--TODO 2: Create 5 lightning-button components-->
-            <lightning-button label="All" onclick={getAllLeadsHandle}></lightning-button>
-            <lightning-button label="Open – Not Contacted" onclick={getOpenNotContactedLeadsHandle}></lightning-button>
-            <lightning-button label="Working Contacted" onclick={getWorkingContactedLeadsHandle}></lightning-button>
-            <lightning-button label="Closed – Converted" onclick={getClosedConvertedLeadsHandle}></lightning-button>
-            <lightning-button label="Closed – Not Converted" onclick={getClosedNotConvertedLeadsHandle}></lightning-button>
+  <!--TODO 1: Add required attributes to the lightning-card component-->
+  <lightning-card title="Lead Filter" icon-name="custom:custom101">
+    <div class="slds-var-m-around_medium">
+      <p class="slds-text-heading_medium">Select a status</p>
+      <br />
+      <!--TODO 2: Create 5 lightning-button components-->
+      <lightning-button
+        label="All"
+        onclick={getAllLeadsHandle}
+      ></lightning-button>
+      <lightning-button
+        label="Open – Not Contacted"
+        onclick={getOpenNotContactedLeadsHandle}
+      ></lightning-button>
+      <lightning-button
+        label="Working Contacted"
+        onclick={getWorkingContactedLeadsHandle}
+      ></lightning-button>
+      <lightning-button
+        label="Closed – Converted"
+        onclick={getClosedConvertedLeadsHandle}
+      ></lightning-button>
+      <lightning-button
+        label="Closed – Not Converted"
+        onclick={getClosedNotConvertedLeadsHandle}
+      ></lightning-button>
 
-            <!--TODO 3: Create a lightning-datatable-->
-            <template if:true={leads}>
-                <lightning-datatable
-                    key-field="id"
-                    data={leads}
-                    columns={columns}>
-                </lightning-datatable>
-            </template>
-        </div>
-    </lightning-card>
+      <!--TODO 3: Create a lightning-datatable-->
+      <template if:true={leads}>
+        <lightning-datatable key-field="id" data={leads} columns={columns}>
+        </lightning-datatable>
+      </template>
+    </div>
+  </lightning-card>
 </template>

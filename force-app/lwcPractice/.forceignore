@@ -9,4 +9,4 @@ package.xml
 **/.eslintrc.json
 
 # LWC Jest
-**/__tests__/**
+**/__tests__/** 
